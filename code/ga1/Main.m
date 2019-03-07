@@ -1,1 +1,0 @@
-ga = GeneticAlgorithm(100, 0.01, 0.95, 0);
