@@ -1,6 +1,5 @@
 # geneticAlgorithm
-Some codes and materials for my thesis, and record the happy and fulfilling period.
-
+Some codes and materials for my thesis.
 ### 6th March, 2019
 
 "hello word" level genetic algorithm.
