@@ -9,3 +9,6 @@ Some codes and materials for my thesis, and record this happy and fulfilling per
 
 Read the book "Genetic Algorithms with Python" and write some basics genetic algorithm.
 
+### 8th March, 2019
+
+Write a programme to solve tsp using genetic algorithm
