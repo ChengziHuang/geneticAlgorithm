@@ -11,3 +11,7 @@ Read the book "Genetic Algorithms with Python" and write some basics genetic alg
 ### 8th March, 2019
 
 Write a programme to solve tsp using genetic algorithm
+
+### 9th March, 2019
+
+Read paper "A Novel Genetic Algorithm Based On Immunity"
