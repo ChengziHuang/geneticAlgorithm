@@ -23,7 +23,7 @@ end
 
 function d = calculate(data, index1, index2)
     x1 = data(2, index1);
-    y1 = data(3, index2);
+    y1 = data(3, index1);
     
     x2 = data(2, index2);
     y2 = data(3, index2);

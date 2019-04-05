@@ -21,10 +21,11 @@ classdef GeneticAlgorithm
         end
         
         function parentIndex = select(obj)
-            candidate = ceil(rand(1, obj.tournamentSize) * obj.populationSize);
+            % candidate store the index of selected chromosome
+            candidate = randperm(obj.populationSize, obj.tournamentSize);
             bestIndex = 1;
             for i = 2 : obj.tournamentSize
-                if obj.fitness(candidate(i)) > obj.fitness(candidate(bestIndex))
+                if obj.fitness(candidate(i)) < obj.fitness(candidate(bestIndex))
                     bestIndex = i;
                 end
             end
@@ -34,7 +35,7 @@ classdef GeneticAlgorithm
         function [individual, bestFitness] = selectBestIndividual(obj)
             bestIndex = 1;
             for index = 2 : obj.populationSize
-                if obj.fitness(index) > obj.fitness(bestIndex)
+                if obj.fitness(index) < obj.fitness(bestIndex)
                     bestIndex = index;
                 end
             end
@@ -46,7 +47,7 @@ classdef GeneticAlgorithm
             newOffspring = offspring;
             for i = 1 : obj.chromosomeLength
                 if rand() < obj.mutationRate
-                    newGenePos = randi([1 obj.chromosomeLength]);
+                    newGenePos = randperm(obj.chromosomeLength, 1);
                     gene = newOffspring(newGenePos);
                     
                     newOffspring(newGenePos) = newOffspring(i);
@@ -61,8 +62,8 @@ classdef GeneticAlgorithm
             if rand() < obj.crossoverRate
                 offspring = zeros(1, obj.chromosomeLength);
                 % get subset of parent chromosomes
-                substrPos1 = randi([1 obj.chromosomeLength]);
-                substrPos2 = randi([1 obj.chromosomeLength]);
+                substrPos1 = randperm(obj.chromosomeLength, 1);
+                substrPos2 = randperm(obj.chromosomeLength, 1);
                 
                 % make the smaller the start and the larger the end
                 startSubstr = min([substrPos1 substrPos2]);
@@ -70,22 +71,24 @@ classdef GeneticAlgorithm
                 
                 offspring(startSubstr : endSubstr) = father(startSubstr : endSubstr);
                 
-                % Loop through parent2's city tour
+                empty = [1 : startSubstr - 1, endSubstr + 1 : obj.chromosomeLength];
+                emptyIndex = 1;
+                % Loop through parent2's city tour and add city
                 for index = 1 : obj.chromosomeLength
-                    % the index is fuck begin from 1 not 0 
-                    geneIndex = rem((index + endSubstr - 1), obj.chromosomeLength) + 1;
+                    geneIndex = index + endSubstr;
+                    if geneIndex > obj.chromosomeLength
+                        geneIndex = geneIndex - obj.chromosomeLength;
+                    end    
+                    
                     
                     % if offspring doesn't have the city add it
                     if ~ismember(mother(geneIndex), offspring)
-                        for ii = 1 : obj.chromosomeLength
-                            if offspring(ii) == 0
-                                offspring(ii) = mother(geneIndex);
-                            end
-                        end
+                        offspring(empty(emptyIndex)) = mother(geneIndex);
+                        emptyIndex = emptyIndex + 1;
                     end
                 end
             else 
-                if obj.fitness(fatherIndex) > obj.fitness(motherIndex)
+                if obj.fitness(fatherIndex) < obj.fitness(motherIndex)
                     offspring = father;
                 else 
                     offspring = mother;

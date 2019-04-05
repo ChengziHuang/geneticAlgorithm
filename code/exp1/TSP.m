@@ -1,12 +1,12 @@
 clear, clc
-path = '../../data/TSPLIB95/tsp/ali535.tsp';
+path = '../../data/TSPLIB95/tsp/berlin52.tsp';
 [data, num] = readData(path);
 %% parameter
 mutationRate = 0.001;
 crossoverRate = 0.9;
-populationSize = 100;
+populationSize = 500;
 tournamentSize = 5;
-maxGeneration = 30000;
+maxGeneration = 5000;
 %% create and evaluate the random initial population
 population = zeros(populationSize, num);
 for i = 1 : populationSize
@@ -42,3 +42,4 @@ end
 
 x = 1 : generation;
 plot(x, visualFit,'-*b');
+bestFitness = min(visualFit);
