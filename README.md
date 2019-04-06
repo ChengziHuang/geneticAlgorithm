@@ -1,4 +1,5 @@
-# geneticAlgorithm
+# Genetic Algorithm
+
 Some codes and materials for my thesis.
 
 ## GA Framework
@@ -22,9 +23,3 @@ Some codes and materials for my thesis.
 &#8194; &#8194; &#8194; &#8194;**Offspring Selection:** Create a new population from offspring and P
 
 **Output:** Return the best individual foud
-
-
-
-
-
-
