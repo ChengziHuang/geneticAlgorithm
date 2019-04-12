@@ -6,7 +6,7 @@ mutationRate = 0.002;
 crossoverRate = 0.9;
 populationSize = 500;
 tournamentSize = 5;
-maxGeneration = 5000;
+maxGeneration = 1500;
 %% create and evaluate the random initial population
 population = zeros(populationSize, num);
 for i = 1 : populationSize
