@@ -24,19 +24,19 @@ Some codes and materials for my thesis.
 
 **Output:** Return the best individual foud
 
-## Hybrid
+## Idea 
 
-Adaptive mechanism
+Exploration is import to ensure global reliability, i.e. every part of the doamin is searched enough to provide a reliable estimate of the global optimum.
 
-Local search
+Exploitation is also important since it concentrates the search effort around the best solutions found so far by searching their neighborhoods to produce better solutions.
 
-## Main idea
+## Algorithm Framework
 
 **Initialization:** Generate an initial GA population
 
 **Repeat until the stopping criteria are met:**
 
-**Evaluation:** Evaluate the fitness *f(x)* of each individual
+&#8194; &#8194; &#8194; &#8194; **Evaluation:** Evaluate the fitness *f(x)* of each individual
 
 &#8194; &#8194; &#8194; &#8194; **for** each individual in the population
 
