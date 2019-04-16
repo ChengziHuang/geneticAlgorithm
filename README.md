@@ -26,8 +26,30 @@ Some codes and materials for my thesis.
 
 ## Hybrid
 
-Adaptive mechanism 
+Adaptive mechanism
 
-Fuzzy inference 
+Local search
 
-Simulated annealing
+## Main idea
+
+**Initialization:** Generate an initial GA population
+
+**Repeat until the stopping criteria are met:**
+
+**Evaluation:** Evaluate the fitness *f(x)* of each individual
+
+&#8194; &#8194; &#8194; &#8194; **for** each individual in the population
+
+&#8194; &#8194; &#8194; &#8194; &#8194; &#8194; &#8194; &#8194; Proceed with local improvement and replace the genotype in the population with the improved solution
+
+&#8194; &#8194; &#8194; &#8194; Apply standard GA operator to create a new population; i.e, Selection, Mutation and crossover
+
+**Output:** Return the best individual foud
+
+## Experiment
+
+Benchmark Test Functions
+
+TSP
+
+cluster
