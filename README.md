@@ -24,10 +24,10 @@ Some codes and materials for my thesis.
 
 **Output:** Return the best individual foud
 
-## Idea 
+## Idea
 
 Exploration is import to ensure global reliability, i.e. every part of the domain is searched enough to provide a reliable estimate of the global optimum.
 
 Exploitation is also important since it concentrates the search effort around the best solutions found so far by searching their neighborhoods to produce better solutions.
 
-For specific question, degisn some new genetic operator.
+For specific question, degisn some new genetic operators i.e. Edge Assembly Crossover for the Travelling salesman problem.
