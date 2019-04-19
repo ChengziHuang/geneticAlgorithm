@@ -26,30 +26,8 @@ Some codes and materials for my thesis.
 
 ## Idea 
 
-Exploration is import to ensure global reliability, i.e. every part of the doamin is searched enough to provide a reliable estimate of the global optimum.
+Exploration is import to ensure global reliability, i.e. every part of the domain is searched enough to provide a reliable estimate of the global optimum.
 
 Exploitation is also important since it concentrates the search effort around the best solutions found so far by searching their neighborhoods to produce better solutions.
 
-## Algorithm Framework
-
-**Initialization:** Generate an initial GA population
-
-**Repeat until the stopping criteria are met:**
-
-&#8194; &#8194; &#8194; &#8194; **Evaluation:** Evaluate the fitness *f(x)* of each individual
-
-&#8194; &#8194; &#8194; &#8194; **for** each individual in the population
-
-&#8194; &#8194; &#8194; &#8194; &#8194; &#8194; &#8194; &#8194; Proceed with local improvement and replace the genotype in the population with the improved solution
-
-&#8194; &#8194; &#8194; &#8194; Apply standard GA operator to create a new population; i.e, Selection, Mutation and crossover
-
-**Output:** Return the best individual foud
-
-## Experiment
-
-Benchmark Test Functions
-
-TSP
-
-cluster
+For specific question, degisn some new genetic operator.
