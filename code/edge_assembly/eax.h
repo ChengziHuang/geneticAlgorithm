@@ -119,26 +119,26 @@ void ABcycle(const Individual& parentA, const Individual& parentB, std::vector<T
 
 Individual EAX(const Individual& parentA, const Individual& parentB, const std::vector<std::vector<int> >& cost, const std::vector<std::list<std::pair<int, int> > >& NNlist){
 
-std::vector<Tour> Eset;
-std::vector<Individual> children(CHILDREN, parentA);
+    std::vector<Tour> Eset;
+    std::vector<Individual> children(CHILDREN, parentA);
 
 
-ABcycle(parentA, parentB, Eset);
+    ABcycle(parentA, parentB, Eset);
 
-for(int i = 0; i < CHILDREN; i++){
-
-
-children[i].divide_tour(Eset);
+    for (int i = 0; i < CHILDREN; i++) {
 
 
-children[i].conect_subtour(cost, NNlist);
+        children[i].divide_tour(Eset);
 
 
-children[i].evaluate(cost);
-}
-children.push_back(parentA);
-children.push_back(parentB);
-return *min_element(children.begin(), children.end());;
+        children[i].conect_subtour(cost, NNlist);
+
+
+        children[i].evaluate(cost);
+    }
+    children.push_back(parentA);
+    children.push_back(parentB);
+    return *min_element(children.begin(), children.end());;
 }
 
 #endif
