@@ -5,7 +5,7 @@ make
 ./TSP a280.tsp
 ```
 
-## Example output 
+### Example output 
 
 Instance : u724.tsp\
 opt distance : 41910\
