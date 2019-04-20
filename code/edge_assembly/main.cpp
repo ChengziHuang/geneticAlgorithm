@@ -5,7 +5,7 @@ int getOpt(std::string filename) {
 	int position = filename.find(".");
 	std::string label = filename.substr(0, position);
 
-	std::ifstream in("/home/czh/桌面/TSP/TSPLIB/bestSolutions.txt");
+	std::ifstream in("./TSPLIB/bestSolutions.txt");
 
 	std::string str;
 	int length;
@@ -37,7 +37,7 @@ void analyze(const std::vector<Individual>& population, double &min, double &max
 int main(int argc, char* argv[]){
 
     std::string filename(argv[1]);
-    filename = "/home/czh/桌面/TSP/TSPLIB/" + filename;
+    filename = "./TSPLIB/" + filename;
 
     
     Tour data;
