@@ -1,7 +1,7 @@
 clear, clc
 path = '../../data/TSPLIB95/tsp/berlin52.tsp';
 [data, num] = readData(path);
-%% parameter
+%% parameterdc
 mutationRate = 0.002;
 crossoverRate = 0.9;
 populationSize = 500;
