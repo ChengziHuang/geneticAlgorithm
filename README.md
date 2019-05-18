@@ -1,7 +1,5 @@
 # A genetic algorihtm to solve the Travelling Salesman Problem
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
 ## Usage
 
 ```shell
@@ -13,7 +11,7 @@ All parameters are configure in the parameter.h file.
 
 ## idea
 
-The initial solutions used by genetic algorithm  are found by $2-opt$ local search.
+The initial solutions used by genetic algorithm  are found by $2-opt$.
 
 The crossover operator uses the edges to cross:
 
