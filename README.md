@@ -38,6 +38,8 @@ make
 ./TSP a280.tsp
 ```
 
+All parameters are configure in the parameter.h file.
+
 ## output
 
 ```
@@ -168,5 +170,3 @@ opt count : 10
 opt average : 2579
 convergence generation : 9.7
 ```
-
-All parameters are configure in the parameter.h file.
