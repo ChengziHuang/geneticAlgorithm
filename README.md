@@ -23,7 +23,7 @@ The crossover operator uses the edges to cross:
 1. {x<sub>1</sub>,..., x<sub>pop</sub>} := 2-opt()
 2. **repeat**
 3. &emsp; r(.) := a random permutation of 1,..., x<sub>pop</sub>
-4. &emsp; **for** i := 1 to   x<sub>pop</sub> - 1  **do**
+4. &emsp; **for** i := 1 to   x<sub>pop</sub> **do**
 5. &emsp; &emsp; p<sub>A</sub> := x<sub>r(i)</sub>, p<sub>B</sub> := x<sub>r(i+1)</sub>
 6. &emsp; &emsp; {c<sub>1</sub>,...,c<sub>N<sub>ch</sub></sub>} := Crossover(p<sub>A</sub>, p<sub>B</sub>)
 7. &emsp; &emsp; x<sub>r(i)</sub> := Select(c<sub>1</sub>,...,c<sub>N<sub>ch</sub></sub>, p<sub>A</sub>)
