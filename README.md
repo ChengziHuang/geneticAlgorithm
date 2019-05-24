@@ -38,7 +38,7 @@ make
 ./TSP a280.tsp
 ```
 
-All parameters are configure in the parameter.h file.
+All parameters are configured in the parameter.h file.
 
 ## output
 
