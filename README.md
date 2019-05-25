@@ -31,7 +31,7 @@ The crossover operator uses the edges to cross:
 9. **until** a termination condition is satisfied
 10. **return** the best individual in the population
 
-## Usage
+## usage
 
 ```shell
 make
