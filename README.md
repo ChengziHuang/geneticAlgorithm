@@ -1,4 +1,4 @@
-# A genetic algorihtm to solve the Travelling Salesman Problem
+# A genetic algorithm to solve the Travelling Salesman Problem
 
 ## idea
 
